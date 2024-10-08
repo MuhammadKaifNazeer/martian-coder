@@ -1,52 +1,85 @@
 ---
-title: Integrating Cal.com Into Your Website Using React A Step-by-Step Guide
-description: Cal.com is one such tool that streamlines the process of scheduling meetings and appointments, helping users save time and minimize the back-and-forth communication often associated with setting up meetings.
-date: 2024-03-13
----
+title: How to Integrate Cal.com into Your React Website for Seamless Scheduling - A Complete Guide
+description: In this comprehensive guide, you'll learn how to integrate Cal.com into your React website for seamless scheduling. We’ll guide you through the process of signing up for Cal.com, installing the necessary packages, and embedding the scheduling widget into your site. You’ll discover two methods - using the Cal.com widget for more customization or the embed package for a quick setup. By the end, you’ll have a fully functional scheduling system ready for deployment.
+date: 2024-10-08
+---  
 
-In today’s fast-paced world, efficient scheduling tools have become essential for businesses and professionals to manage their time effectively. Cal.com is one such tool that streamlines the process of scheduling meetings and appointments, helping users save time and minimize the back-and-forth communication often associated with setting up meetings. In this blog post, we’ll explore how you can seamlessly embed Cal.com into your website using React, one of the most popular JavaScript libraries for building user interfaces.
+In today's fast-moving digital landscape, having effective scheduling tools is vital for businesses and professionals to manage their time efficiently. Cal.com offers a streamlined solution for booking meetings and appointments, reducing the time spent on back-and-forth communications. In this post, we'll guide you through embedding Cal.com directly into your React website, leveraging the popular JavaScript library to enhance user experience and simplify scheduling workflows.
 
 ## Step 1: Sign Up for Cal.com Account
 
-Before you can embed Cal.com into your website, you’ll need to sign up for an account on Cal.com. Fortunately, the process is straightforward and only takes a few minutes. Once you’ve signed up, you’ll have access to your Cal.com dashboard where you can customize your scheduling preferences and generate embeddable scheduling links.
+To embed Cal.com into your website, the first step is to create a Cal.com account. The sign-up process is quick and easy, taking just a few minutes. After signing up, you'll gain access to your Cal.com dashboard, where you can personalize your scheduling settings and generate the necessary embeddable links for seamless integration.
 
 ## Step 2: Install React
 
-If you haven’t already done so, you’ll need to set up a React project to integrate Cal.com into your website. You can create a new React project using create-react-app or your preferred method for initializing React projects.
+If you haven't set up a React project yet, you'll need to do so in order to integrate Cal.com into your website. You can easily create a new React project using the `create-react-app` command or your preferred method for starting React applications.
 
-## Step 3: Install Cal.com Widget Package
+## Step 3: Install Cal.com Widget Package (Method 1)
 
-Cal.com provides a React widget package that makes it easy to embed scheduling functionality into your React application. You can install the Cal.com widget package using npm:
+Cal.com offers a React widget package that simplifies embedding scheduling functionality into your React application. You can install the Cal.com widget package using npm:
 
 ```bash
 npm install @calcom/react-widget
 ```
 
-Once you’ve installed the Cal.com widget package, you can add the Cal.com widget component to your React application. Import the CalcomWidget component into your React component and use it within your JSX markup:
+Once you've installed the Cal.com widget package, you can add the Cal.com widget component to your React application. Import the `CalcomWidget` component into your React component and use it within your JSX markup:
 
-```tsx
-import React from "react";
-import { CalcomWidget } from "@calcom/react-widget";
+```jsx
+import React from 'react';
+import { CalcomWidget } from '@calcom/react-widget';
 
 const App = () => {
   return (
     <div>
-      <h1>Welcome to My Website</h1>
+      <h1>Hello World!</h1>
       <CalcomWidget
         schedulingLink="YOUR_SCHEDULING_LINK_HERE"
-        buttonText="Book my Cal"
+        buttonText="Book A Cal"
+        
       />
     </div>
   );
-};
+}
 
 export default App;
 ```
 
-Replace “YOUR_SCHEDULING_LINK_HERE” with the scheduling link generated from your Cal.com dashboard. You can customize the button text to suit your preferences.
+Replace `YOUR_SCHEDULING_LINK_HERE` with the scheduling link generated from your Cal.com dashboard. You can customize the button text to suit your preferences.
 
-The Cal.com widget component allows for customization to match the look and feel of your website. You can customize various aspects such as the button text, button color, and widget size by passing props to the CalcomWidget component.
+The Cal.com widget component allows for customization to match the look and feel of your website. You can modify aspects such as the button text, button color, and widget size by passing props to the `CalcomWidget` component.
 
-## Step 4: Test and Deploy Your Website
+## Step 3: Install Cal.com Emdeb Package (Method 2)
 
-Once you’ve integrated Cal.com into your React application, it’s essential to test the functionality to ensure everything is working correctly. Your control panel when someone books the appointment.
+Cal.com also offers a React embed package that you can use. To install it, run the following npm command:
+
+```bash
+npm install @calcom/embed-react
+```
+After installing the package, you can integrate the Cal.com embed component into your React app. Simply import the `Cal` component and include it in your JSX markup like this:
+
+```jsx
+import React from 'react';
+import Cal from "@calcom/embed-react";
+
+export default function App() {
+  return (
+    <div className="App">
+      <h1>Below is an inline embed of Cal.com</h1>
+      <Cal calLink="john/book-me-now"></Cal>
+    </div>
+  );
+}
+```
+
+The `Cal` component uses a prop named `calLink` to specify the Cal.com scheduling link to embed. For example, `john/book-me-now` is used as a placeholder link. Be sure to replace it with your actual scheduling link, which you can generate from your Cal.com dashboard.
+
+## What is The Difference Between Method 1 And Method 2?
+
+Both code examples serve the same purpose of embedding a Cal.com scheduling widget into a React application.
+
+In summary, Method 1 offers a more detailed guide with comprehensive instructions and customization options, while Method 2 provides a straightforward, ready-to-use snippet for quick integration. The choice between the two methods will depend on your familiarity with React, customization needs, and personal preferences.   
+
+After integrating Cal.com into your React app, make sure to test its functionality to ensure everything works smoothly. 
+
+## Author
+[Muhammad Kaif Nazeer](https://x.com/MuhammadKaif999)
