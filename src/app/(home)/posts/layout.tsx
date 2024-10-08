@@ -9,7 +9,7 @@ const RootDocsLayout = ({ children }: { children: ReactNode }) => {
       nav={{
         title: "Matian Coder",
       }}
-      githubUrl="https://github.com"
+      githubUrl="https://github.com/MuhammadKaifNazeer/martian-coder/"
     >
       {children}
     </DocsLayout>

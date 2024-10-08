@@ -7,7 +7,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
       nav={{
         title: "Martian Coder",
       }}
-      githubUrl="https://github.com/"
+      githubUrl="https://github.com/MuhammadKaifNazeer/martian-coder/"
     >
       {children}
     </HomeLayout>

@@ -35,7 +35,7 @@ const Page = ({ params }: { params: { slug?: string[] } }) => {
       full={post.data.full}
       lastUpdate={lastUpdate}
       editOnGithub={{
-        repo: "mdx_blog",
+        repo: "martian-coder",
         owner: "MuhammadKaifNazeer",
         sha: "main",
         path,
