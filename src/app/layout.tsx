@@ -3,6 +3,7 @@ import { RootProvider } from "fumadocs-ui/provider";
 import "katex/dist/katex.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { HomeLayout } from "fumadocs-ui/home-layout";
 import type { ReactNode } from "react";
 import Footer from "@/components/footer";
 import "./global.css";
@@ -16,11 +17,18 @@ const Layout = ({ children }: { children: ReactNode }) => {
     <html lang="en" className={inter.className}>
       <head>
         <meta name="google-site-verification" content="BMjfJbsMp6GG5QSG95rO9IVgptLFSYxt1J1HaHa4aOU" />
-      </head>   
+      </head>
       <body className="flex min-h-dvh flex-col">
         <RootProvider>
           <Analytics />
-          {children}
+          <HomeLayout
+            nav={{
+              title: "Martian Coder",
+            }}
+            githubUrl="https://github.com/MuhammadKaifNazeer/martian-coder/"
+          >
+            {children}
+          </HomeLayout>
           <Footer />
         </RootProvider>
       </body>

@@ -1,6 +1,6 @@
 import { DocsLayout } from "fumadocs-ui/layout";
 import type { ReactNode } from "react";
-import { sortedByDatePageTree } from "../../source";
+import { sortedByDatePageTree } from "../source";
 
 const RootDocsLayout = ({ children }: { children: ReactNode }) => {
   return (
