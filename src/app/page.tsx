@@ -15,8 +15,7 @@ const HomePage = () => {
         <section className="flex flex-col items-start gap-2 py-8 ">
           <Link
             className="group inline-flex items-center px-0.5 text-sm font-medium"
-            href="https://github.com/MuhammadKaifNazeer/mdx_blog"
-            target="_blank"
+            href="https://martiancoder.vercel.app/posts/write-post-on-martian-coder"
           >
             <NotebookPen className="size-4" />
             <div
