@@ -14,6 +14,9 @@ const inter = Inter({
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="en" className={inter.className}>
+      <head>
+        <meta name="google-site-verification" content="BMjfJbsMp6GG5QSG95rO9IVgptLFSYxt1J1HaHa4aOU" />
+      </head>   
       <body className="flex min-h-dvh flex-col">
         <RootProvider>
           <Analytics />
