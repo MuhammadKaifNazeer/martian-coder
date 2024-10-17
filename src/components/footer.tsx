@@ -23,9 +23,9 @@ export default function Footer() {
               <Link
                 target="__blank"
                 className="dark:text-sky-500 text-neutral-600 font-medium"
-                href="https://x.com/MuhammadKaif999"
+                href="https://bento.me/muhammadkaifnazeer"
               >
-                @MuhammadKaif999
+                Muhammad Kaif Nazeer
               </Link>
             </div>
           </div>

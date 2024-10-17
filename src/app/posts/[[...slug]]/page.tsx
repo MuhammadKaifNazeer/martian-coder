@@ -47,7 +47,6 @@ const Page = ({ params }: { params: { slug?: string[] } }) => {
     >
       <p className="text-start">{date}</p>
       <DocsTitle>{post.data.title}</DocsTitle>
-      <DocsDescription>{post.data.description}</DocsDescription>
       <DocsBody>
         <MDX components={defaultComponents} />
       </DocsBody>
