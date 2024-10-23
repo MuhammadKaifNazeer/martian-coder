@@ -13,7 +13,7 @@ export default function Footer() {
               >
                 <div className="flex flex-col">
                   <h1 className="text-black dark:text-white font-sans">
-                    Matian Coder
+                    Martian Coder
                   </h1>
                 </div>
               </Link>
